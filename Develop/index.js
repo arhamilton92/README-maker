@@ -1,8 +1,8 @@
 //just want to say I'm really enjoying node. This is the most fun I've had so far!
 
 //VARIABLES
-const fs = require("fs");
 const inquirer = require("inquirer");
+const write = require("./writefile.js");
 
 // array of questions for user
 const answerArray = [];
@@ -50,22 +50,6 @@ const questions = [
     }
 ];
 
-// // function to write README file
-// function writeToFile() {
-//     //use the fs package
-//     fs.writeFile("newREADME.md", `
-
-
-
-
-//     `, "utf8", function(err){
-//         if(err) {
-//             throw err;
-//         }
-//         console.log("newREADME.md has been created!");
-//     })
-// }
-
 // function to initialize program
 function init() {
     //intro
@@ -87,14 +71,12 @@ function init() {
                 answer.tests,
                 answer.questions
                 );
-            // writeToFile();  
+            write.writeToFile();
     })
 }
 
 // function call to initialize program
 init();
-
-module.exports(writeStory())
 
 
 
