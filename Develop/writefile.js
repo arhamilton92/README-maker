@@ -7,24 +7,15 @@ module.exports = {
 };
 
 // function to write README file
-function writeToFile(
-    title, 
-    description, 
-    installation, 
-    usage, 
-    license, 
-    contributing, 
-    test, 
-    question
-    ) {
+function writeToFile(answer, license) {
     //use the fs package
     fs.writeFile("newREADME.md", `
 
-# ${title}
+# ${answer.title}
 
 ## Description 
 
-${description}
+${answer.description}
 
 
 ## Table of Contents (Optional)
@@ -37,26 +28,23 @@ ${description}
 
 ## Installation
 
-${installation}
-
+${answer.installation}
 
 ## Usage 
 
-
-
-## Credits
-
-
+${answer.usage}
 
 ## License
 
-
+${license}
 
 ## Contributing
 
+${answer.contributing}
 
 ## Tests
 
+${answer.tests}
 
 
 `, "utf8", function(err){

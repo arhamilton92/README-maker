@@ -4,6 +4,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const write = require("./writefile.js");
+let license = "";
 
 //array of questions to prompt user
 const questions = [
@@ -28,9 +29,15 @@ const questions = [
         name: "usage"
     },
     {
-        type: "input",
-        message: "Please select from the following licenses:",
-        name: "license"
+        type: "list",
+        message: "What type of license would you like to use?",
+        choices: [
+            "GNU General Public License", new inquirer.Separator(), 
+            "Mozilla Public License", new inquirer.Separator(), 
+            "MIT License", new inquirer.Separator(), 
+            "Boost Software License"
+        ],
+        name: "licensing"
     },
     {
         type: "input",
@@ -60,19 +67,41 @@ function init() {
         //.prompt uses the questions array to ask the user questions
         .prompt(questions)
         .then((answer) => {
+            console.log(answer);
+            getLicense(answer);
             //sets info to parameters for use in writeToFile
-            write.writeToFile(
-                answer.title, 
-                answer.description, 
-                answer.installation, 
-                answer.usage, 
-                answer.license, 
-                answer.contributing, 
-                answer.test, 
-                answer.question);
+            answer.title
+            write.writeToFile(answer, license)
             })
         
 }
 
+function getLicense(answer) {
+    console.log('inside getlicense function')
+    license = answer.licensing;
+    switch(license) {
+        case "GNU General Public License": 
+        license =
+`Application is licensed under the GNU General Public License.
+[license link](https://choosealicense.com/licenses/gpl-3.0/)`;
+        break;
+        case "Mozilla Public License":
+            license = 
+`Application is licensed under the Mozilla Public License.
+[license link](https://choosealicense.com/licenses/mpl-2.0/)`;
+            break;
+            case "MIT License":
+                license = 
+`Application is licensed under the MIT License.
+[license link](https://choosealicense.com/licenses/mit/)`;
+                break;
+                case "Boost Software License":
+                license = 
+`Application is licensed under the Boost Software License.
+[license link](https://choosealicense.com/licenses/bsl-1.0/)`;
+                break;               
+    }
+    console.log(license)
+}
 //FUNCTION CALLS
 init();
