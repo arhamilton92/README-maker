@@ -1,10 +1,10 @@
 
 
-# my project
+# Really Cool Project
 
 ## Description 
 
-does stuff
+Readme Generator. I made this readme with it!
 
 
 ## Table of Contents (Optional)
@@ -17,11 +17,11 @@ does stuff
 
 ## Installation
 
-click install
+idk do install-y stuff
 
 ## Usage 
 
-do stuff
+answer questions
 
 ## License
 
@@ -30,7 +30,7 @@ Application is licensed under the MIT License.
 
 ## Contributing
 
-don't
+none. don't
 
 ## Tests
 
