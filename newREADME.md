@@ -1,10 +1,10 @@
 
 
-# Really Cool Project
+# Sample project README
 
 ## Description 
 
-Readme Generator. I made this readme with it!
+this is a sample README.md, made with README Maker!
 
 
 ## Table of Contents (Optional)
@@ -17,20 +17,20 @@ Readme Generator. I made this readme with it!
 
 ## Installation
 
-idk do install-y stuff
+no installation needed.
 
 ## Usage 
 
-answer questions
+simply answer the questions!
 
 ## License
 
-Application is licensed under the MIT License.
-[license link](https://choosealicense.com/licenses/mit/)
+Application is licensed under the Mozilla Public License.
+[license link](https://choosealicense.com/licenses/mpl-2.0/)
 
 ## Contributing
 
-none. don't
+no contributers!
 
 ## Tests
 

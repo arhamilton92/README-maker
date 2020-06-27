@@ -21,4 +21,5 @@ then simply follow the prompts! Your new readme's filename will be newREADME.md,
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/64741393/85349226-ed405b00-b4cb-11ea-9a7d-3434907c5bd2.png)
+![image](https://user-images.githubusercontent.com/64741393/85912078-a322e680-b7f7-11ea-85a8-690699831791.png)
+

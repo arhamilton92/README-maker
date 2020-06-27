@@ -67,7 +67,6 @@ function init() {
         //.prompt uses the questions array to ask the user questions
         .prompt(questions)
         .then((answer) => {
-            console.log(answer);
             getLicense(answer);
             //sets info to parameters for use in writeToFile
             answer.title
@@ -101,7 +100,7 @@ function getLicense(answer) {
 [license link](https://choosealicense.com/licenses/bsl-1.0/)`;
                 break;               
     }
-    console.log(license)
 }
+
 //FUNCTION CALLS
 init();
